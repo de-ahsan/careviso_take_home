@@ -52,6 +52,6 @@ class PackageSelector
 
   # Checks if there are extra products in the combination that are not in the order
   def self.extra_products?(order, combination_products)
-    !(combination_products - order).empty?
+    !((combination_products - order).empty? && combination_products.length === order.length)
   end
 end
