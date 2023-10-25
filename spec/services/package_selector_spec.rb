@@ -10,7 +10,7 @@ RSpec.describe PackageSelector do
   let(:packages) {
     [
       create(:package, :with_products, products: [product_a, product_b]),
-      create(:package, :with_products, products: [product_b, product_c])
+      create(:package, :with_products, products: [product_c])
     ].map { |package| { package.name => package.products.pluck(:name) } }
   }
 

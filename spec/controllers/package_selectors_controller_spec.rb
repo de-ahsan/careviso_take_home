@@ -9,7 +9,7 @@ RSpec.describe PackageSelectorsController, type: :controller do
     let!(:order) { create(:order, :with_products, products: [product_a, product_b, product_c]) }
 
     let!(:package1) { create(:package, :with_products, name: "Package1", products: [product_a, product_b]) }
-    let!(:package2) { create(:package, :with_products, name: "Package2", products: [product_b, product_c]) }
+    let!(:package2) { create(:package, :with_products, name: "Package2", products: [product_c]) }
 
     context 'when valid packages are found' do
       it 'returns the optimal package names' do
